@@ -45,7 +45,8 @@ def form(request):
                 fail_silently=False,
                 )
             except:
-                messages.info(request, "Can not send email. Enter a valid email or check your internet connection.")                
+                messages.info(request, "Can not send email. Enter a valid email or check your internet connection.")
+                return redirect('form')                
             value = signing.dumps({"id": data.id})
             return redirect('otp', value)
             # return redirect('preview', pk=instance.id)
