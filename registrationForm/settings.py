@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ukhw=4rteh%u%jvl7f(twz+05)&p#@kc43mleh!a&$191hbun%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['bandeve.herokuapp.com', '127.0.0.1']
 
