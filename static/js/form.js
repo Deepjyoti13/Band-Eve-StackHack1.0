@@ -1,7 +1,147 @@
-$('.toggle').on('click', function() {
-    $('.container').stop().addClass('active');
-  });
-  
-  $('.close').on('click', function() {
-    $('.container').stop().removeClass('active');
-  });
+let imgsrc = null;
+$("#ImgUpload").change(function () {
+  fr = new FileReader();
+  fr.readAsDataURL(this.files[0]);
+  fr.onloadend = function (e) {
+    imgsrc = e.target.result;
+  };
+});
+(function ($) {
+  $.fn.previewForm = function (options) {
+    var form_settings = $.extend(
+      {
+        identifier: "label",
+        show_password: true,
+        extratext: "Do You Want To submit?",
+        yes: "YES",
+        no: "NO",
+        title: " preview",
+      },
+      options
+    );
+
+    var dia_log;
+    var renderBUTTON;
+    var this_frm;
+    this_frm = $(this);
+
+    $(this).submit(function () {
+      if ($("#pfomdata").length) {
+        return true;
+      }
+
+      dia_log = "";
+      var needle_cnfrm;
+
+      if (this.id.length > 0) {
+        needle_cnfrm = "#" + this.id + " label";
+      } else {
+        needle_cnfrm = "." + $(this).attr("class") + " label";
+      }
+
+      $(needle_cnfrm).each(function (i, val) {
+        if ($(this).text().length > 2) {
+          what_t = $("#" + $(this).attr("for"));
+
+          switch (what_t.prop("type")) {
+            case "password":
+              if (!form_settings.show_password)
+                dia_log +=
+                  $(this).text() + " your selected password<br/>";
+              else dia_log += $(this).text() + what_t.val() + "<br/>";
+              break;
+            case "select-one":
+              dia_log +=
+                $(this).text() +
+                $("#" + $(this).attr("for") + " option:selected").text() +
+                "<br/>";
+              break;
+            case "radio":
+              if (what_t.is(":checked"))
+                dia_log += "Registration Type:  "+$(this).text()+ " " + "<br/>";
+              break;
+            case "checkbox":
+              if (what_t.is(":checked"))
+                dia_log += $(this).text() + " " + what_t.val() + "<br/>";
+              break;
+            case "file":
+              dia_log +=
+                "Your ID Card: " +
+                `<img src="${imgsrc}" class="idcard"/>` +
+                "<br/>";
+              break;
+            case "undefined":
+              break;
+            default:
+              dia_log += $(this).text() +": "+ what_t.val() + "<br/>";
+              break;
+          }
+        }
+      });
+      dia_log = dia_log.replace("undefined", "");
+
+      renderBUTTON = "";
+      renderBUTTON +=
+        '<a href="javascript:void(0);" class="button form_yes">' +
+        form_settings.yes +
+        "<span></span></a>";
+      renderBUTTON +=
+        '<a href="javascript:void(0);" class="button form_no">' +
+        form_settings.no +
+        "<span></span></a>";
+
+      var renderTemplate = [
+        '<div id="previewOverlay">',
+        '<div id="previewBox">',
+        "<h1>",
+        form_settings.title,
+        "</h1>",
+        "<p>",
+        dia_log,
+        "</p>",
+        "<p>",
+        form_settings.extratext,
+        "</p>",
+        '<div id="previewButtons">',
+        renderBUTTON,
+        "</div></div></div>",
+      ].join("");
+
+      $(renderTemplate).hide().appendTo("body").fadeIn();
+
+      $(".form_yes").click(function () {
+        var input = $("<input>")
+          .attr("type", "hidden")
+          .attr("id", "pfomdata")
+          .val("true");
+        this_frm.append($(input));
+        this_frm.submit();
+      });
+
+      $(".form_no").click(function () {
+        $("#previewOverlay").fadeOut(function () {
+          $(this).remove();
+        });
+      });
+
+      return false;
+    });
+  };
+})(jQuery);
+$(document).ready(function () {
+  $("#myform").previewForm();
+});
+var radios = document.getElementsByName('regType');
+var ticket = document.getElementById('ticket');
+
+for(radio in radios) {
+  radios[radio].onclick = function() {
+    if (this.value === 'Self') {
+        ticket.value = '1';
+        ticket.readOnly = true;
+     } else {
+        ticket.value = '';
+        ticket.readOnly = false;
+     }
+  }
+}
