@@ -1,0 +1,297 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+
+    <title>Band Eve Registration Form</title>
+    
+  <script>
+    setTimeout(function () {
+      $("#ms").remove();
+    }, 8000);
+  </script>
+  <link rel="stylesheet" href="{% static 'css/intlTelInput.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/intlTelInput.css' %}">
+  <link rel="stylesheet" href="{% static 'css/isValidNumber.css' %}">
+</head>
+<body>
+  <div id="bodyx">
+  <div id="bodyx2" >
+    <div class="container" >
+
+        <form method="POST" enctype="multipart/form-data" action="" id="myform"  class="form" action="#">
+          {% csrf_token %}
+
+        <img id="evn" src="{% static 'img/BandEve.png' %}" alt="">
+          <!-- messages -->
+          {% if messages %}
+          {% for mes in messages %}
+          <div class="alert alert-danger" role="alert" id='ms'>
+            {{mes}}
+          </div>
+          {% endfor %}
+          {% endif %}
+        <h2 id="rfp">Register for Passes</h2>
+
+
+        <div class="containerx">
+	
+          <h2>Registration type: </h2>
+          
+        <ul id="ullu">
+        <li>
+          <input type="radio" id="f-option" name="regType" value="Self" required>
+          <label  type="radio" id="f-option" name="regType" value="Self" required for="f-option">Self</label>
+        
+          <div class="check"></div>
+        </li>
+          <li>
+          <input type="radio" id="s-option" name="regType" value="Group" required>
+          <label for="s-option">Group</label>
+          
+          <div class="check"></div>
+        </li>
+                <li>
+          <input type="radio" id="t-option" name="regType" value="Corporate" required>
+          <label for="t-option">Corporate</label>
+          
+          <div class="check"></div>
+        </li>
+              
+        <li>
+          <input type="radio" id="fo-option" name="regType" value="Others" required>
+          <label for="fo-option">Others</label>
+          
+          <div class="check"><div class="inside"></div></div>
+        </li>
+        
+        
+      </ul>
+      </div>
+
+
+
+        <fieldset class="form-fieldset ui-input __first">
+            <input type="text" id="username" name="name" tabindex="0" required/>
+            <label for="username">
+              <span data-text="Full Name">Full Name</span>
+            </label>
+          </fieldset>
+          
+          <fieldset class="form-fieldset ui-input __second">
+            <input type="email" id="email" tabindex="0" name="email" required />
+            <label for="email">
+              <span data-text="E-mail Address">E-mail Address</span>
+            </label>
+          </fieldset>
+
+          <fieldset class="form-fieldset ui-input __second pd-telephone-input " style="z-index: 10;">
+            <div id="result">
+              <input id="phone" type="tel" value="+91" name="phoneNumber" required>
+              <span id="valid-msg" class="hide">✓ Valid</span>
+              <span id="error-msg" class="hide"></span>
+            </div>
+            <label for="phone">
+              <span data-text="Phone Number">Phone Number</span>
+            </label>
+          </fieldset>
+
+          <fieldset class="form-fieldset ui-input __first" style="z-index: 0">
+            <input type="number" required id="ticket" tabindex="0" name="ticketNo" min="1" max="25"/>
+            <label for="ticket">
+              <span data-text="Number of Tickets (Not more than 25)">Number of Tickets (Not more than 25)</span>
+            </label>
+          </fieldset>
+          
+          <div class="width50-left">
+            <h2 id="upim">Upload an image of your id card:</h2><br>
+            <input type="file" name="idCard" id="ImgUpload" class="ImgUpload" accept="image/*" onchange="openFile(event) " required>
+            <label for="ImgUpload">Choose an Image</label>
+            
+            </div>
+            <div class="form-footer">
+              <div class="form-footer">
+                <button class="btn" type="submit">Get Your Pass</button>
+              </div>
+              
+            </form>
+            
+          </div>
+        </div>
+    
+  </div>
+ 
+  <div>
+    <img id="illus" src="{% static 'img/Group.png' %}" alt="">
+  </div>
+</div>  
+        
+<script src="{% static 'js/index.js' %}"></script>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+
+<script>
+  let imgsrc = null;
+  $("#ImgUpload").change(function () {
+    fr = new FileReader();
+    fr.readAsDataURL(this.files[0]);
+    fr.onloadend = function (e) {
+      imgsrc = e.target.result;
+    };
+  });
+  (function ($) {
+    $.fn.previewForm = function (options) {
+      var form_settings = $.extend(
+        {
+          identifier: "label",
+          show_password: true,
+          extratext: "Do You Want To submit?",
+          yes: "YES",
+          no: "NO",
+          title: " preview",
+        },
+        options
+      );
+
+      var dia_log;
+      var renderBUTTON;
+      var this_frm;
+      this_frm = $(this);
+
+      $(this).submit(function () {
+        if ($("#pfomdata").length) {
+          return true;
+        }
+
+        dia_log = "";
+        var needle_cnfrm;
+
+        if (this.id.length > 0) {
+          needle_cnfrm = "#" + this.id + " label";
+        } else {
+          needle_cnfrm = "." + $(this).attr("class") + " label";
+        }
+
+        $(needle_cnfrm).each(function (i, val) {
+          if ($(this).text().length > 2) {
+            what_t = $("#" + $(this).attr("for"));
+
+            switch (what_t.prop("type")) {
+              case "password":
+                if (!form_settings.show_password)
+                  dia_log +=
+                    $(this).text() + " your selected password<br/>";
+                else dia_log += $(this).text() + what_t.val() + "<br/>";
+                break;
+              case "select-one":
+                dia_log +=
+                  $(this).text() +
+                  $("#" + $(this).attr("for") + " option:selected").text() +
+                  "<br/>";
+                break;
+              case "radio":
+                if (what_t.is(":checked"))
+                  dia_log += "Registration Type:  "+$(this).text()+ " " + "<br/>";
+                break;
+              case "checkbox":
+                if (what_t.is(":checked"))
+                  dia_log += $(this).text() + " " + what_t.val() + "<br/>";
+                break;
+              case "file":
+                dia_log +=
+                  "Your ID Card: " +
+                  `<img src="${imgsrc}" class="idcard"/>` +
+                  "<br/>";
+                break;
+              case "undefined":
+                break;
+              default:
+                dia_log += $(this).text() +": "+ what_t.val() + "<br/>";
+                break;
+            }
+          }
+        });
+        dia_log = dia_log.replace("undefined", "");
+
+        renderBUTTON = "";
+        renderBUTTON +=
+          '<a href="javascript:void(0);" class="button form_yes">' +
+          form_settings.yes +
+          "<span></span></a>";
+        renderBUTTON +=
+          '<a href="javascript:void(0);" class="button form_no">' +
+          form_settings.no +
+          "<span></span></a>";
+
+        var renderTemplate = [
+          '<div id="previewOverlay">',
+          '<div id="previewBox">',
+          "<h1>",
+          form_settings.title,
+          "</h1>",
+          "<p>",
+          dia_log,
+          "</p>",
+          "<p>",
+          form_settings.extratext,
+          "</p>",
+          '<div id="previewButtons">',
+          renderBUTTON,
+          "</div></div></div>",
+        ].join("");
+
+        $(renderTemplate).hide().appendTo("body").fadeIn();
+
+        $(".form_yes").click(function () {
+          var input = $("<input>")
+            .attr("type", "hidden")
+            .attr("id", "pfomdata")
+            .val("true");
+          this_frm.append($(input));
+          this_frm.submit();
+        });
+
+        $(".form_no").click(function () {
+          $("#previewOverlay").fadeOut(function () {
+            $(this).remove();
+          });
+        });
+
+        return false;
+      });
+    };
+  })(jQuery);
+</script>
+<script>
+  $(document).ready(function () {
+    $("#myform").previewForm();
+  });
+</script>
+<script>
+  var radios = document.getElementsByName('regType');
+var ticket = document.getElementById('ticket');
+
+for(radio in radios) {
+    radios[radio].onclick = function() {
+      if (this.value === 'Self') {
+          ticket.value = '1';
+          ticket.readOnly = true;
+       } else {
+          ticket.value = '';
+          ticket.readOnly = false;
+       }
+    }
+}
+</script>
+<script src="{% static '/js/intlTelInput.min.js' %}"></script>
+<script src="{% static '/js/fullcountrycode.js' %}"></script>
+<script src="{% static '/js/intlTelInput.js' %}"></script>
+<script src="{% static '/js/isValidNumber.js' %}"></script>
+<script src="{% static '/js/utils.js' %}"></script>
+<script src="{% static '/js/number.js' %}"></script>
+<script src="{% static '/js/image.js' %}"></script>
+</html>

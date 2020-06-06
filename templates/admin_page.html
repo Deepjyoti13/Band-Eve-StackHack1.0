@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/admin_page.css' %}">
+    <title>Manager</title>
+</head>
+
+<body>
+
+    <a id="btn2" href="{% url 'manager_logout' %}">LOG OUT</a>
+    <a href="/"><img id="bev" src="{% static 'img/Bandeve.png' %}" alt=""></a>
+    <p id="man">manager</p>
+    {% if user.is_authenticated %}
+    <p id="hl">Hello,</p>
+    <p id="adm">{{user.username}}</p>
+    {% endif %}
+    <div id="tot">
+        <p id="totl">{{Total}}</p>
+        <p id="totlr">Total Registrations</p>
+    </div>
+    <div id="divided">
+        <div id="divided1">
+            <div id="self">
+                <p id="divnum">{{Self}}</p>
+                <p id="divname">SELF</p>
+            </div>
+            <div id="group">
+                <p id="divnum">{{Group}}</p>
+                <p id="divname">GROUP</p>
+            </div>
+        </div>
+        <div id="divided2">
+            <div id="corporate">
+                <p id="divnum">{{Corporate}}</p>
+                <p id="divname">CORPORATE</p>
+            </div>
+            <div id="others">
+                <p id="divnum">{{Others}}</p>
+                <p id="divname">OTHERS</p>
+            </div>
+        </div>
+
+    </div>
+    <div id="tot2">
+        <p>REGISTRATIONS</p>
+    </div>
+    <div id="list">
+        <div id="listdiv">
+            <p><span id="rg">Registration</span> ID</p>
+            <p id="nm">Name</p>
+            <p id="dt">Date</p>
+            <p id="ps">Passes</p>
+        </div>
+        {% for x in data %}
+        <div id="listdivitem">
+            <p><a style="text-decoration: none; color: white;" href="{% url 'profile' x.id %}">{{x.random}}</a></p>
+            <p>{{x.name}}</p>
+            <p>{{x.date}}</p>
+            <p>{{x.ticketNo}}</p>
+        </div>
+        {% endfor %}
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!-- for loading static files  -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Manager Register</title>
+  
+  <!-- bootstrap css cdn link  -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
+  <!-- css main file  -->
+  <link rel="stylesheet" href="{% static '/css/main.css' %}">
+
+  <!-- jquery cdn link  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <!-- to remove message after 2 sec  -->
+  <script>
+    setTimeout(function() {
+      $("#ms").remove();
+    }, 2000);
+  </script>
+
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row d-flex justify-content-center  ">
+      <div class="col-md-4 col-sm-12  ">
+        <div class="xx">
+          <!-- sign up text  -->
+          <h4 class="text-center text-capitalize text-light">sign up</h4 >
+          <!-- form  -->
+          <form action="register"   method="POST">
+            <!-- for security purposes  -->
+            {% csrf_token %}
+            <!-- first name  -->
+            <input type="text" class="form-control form-control-sm" name="first_name" placeholder="First Name" required><br>
+
+            <!-- last name  -->
+            <input type="text" class="form-control form-control-sm" name="last_name" placeholder="Last Name" required><br>
+
+            <!-- username  -->
+            <input type="text" class="form-control form-control-sm" name="username" placeholder="username" required><br>
+
+            <!-- email  -->
+            <input type="email" class="form-control form-control-sm" name="email" placeholder="email" required><br>
+
+            <!-- password  -->
+            <input type="password" class="form-control form-control-sm" name="password1" placeholder="password" required><br>
+
+            <!-- confirm password  -->
+            <input type="password" class="form-control form-control-sm" name="password2" placeholder="Confirm Password" required><br>
+            
+            <!-- messages -->
+            {% if messages %}
+            {% for mes in messages %}
+            <div class="alert alert-danger" role="alert" id='ms'>
+              {{mes}}
+            </div>
+            {% endfor %}
+            {% endif %}
+            
+            
+            
+            
+            <!-- submit button  -->
+            <button type="submit" id="rdx" class="btn btn-block btn-success" >submit</button>
+          </form>
+          <!-- option to go to home and login pages  -->
+          <div class="text-center text-light">
+            <p>already have an account?
+              <!-- go to login page  -->
+              <a href="login">Sign in</a><br>
+              <!-- go to home page  -->
+              <a href="/">Home</a>
+            </p>
+            
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

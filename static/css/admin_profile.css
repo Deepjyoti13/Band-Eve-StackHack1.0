@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+#icons{
+    left: 85%;
+    position: absolute;
+    top: 3%;
+    z-index: 10;
+}
+#icon{
+    color: black;
+    margin-right: 2vw;
+}
+#bev {
+    
+    left: 5%;
+    width: 8vw;
+    height: auto;
+    position: absolute;
+    top: 3%;
+    background: rgba(112, 43, 43, 0);
+    z-index: 8;
+ }
+ #vid{
+    left: 5%;
+    font-family: montserrat,'sans-serif';
+    font-size: 2.5vh;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    background: rgba(112, 43, 43, 0);
+    z-index: 8;
+ }
+ #date{
+   left: 5%;
+   font-family: montserrat,'sans-serif';
+   font-size: 3vh;
+   font-weight: 600;
+   height: auto;
+   position: absolute;
+   top: 15%;
+   background: rgba(112, 43, 43, 0);
+   z-index: 8;
+ }
+ #name{
+    top: 20%;
+    left: 5%;
+    font-size: 7vh;
+    height: auto;
+    position: absolute;
+    width: 30vw;
+    
+    font-weight: 700;
+    background: rgba(112, 43, 43, 0);
+    z-index: 8;
+    text-transform: uppercase;
+    font-family: 'Anton', sans-serif;
+ }
+ #phn{
+    top: 35%;
+    left: 5%;
+    font-size: 3vh;
+    height: auto;
+    position: absolute;
+    
+    
+    background: rgba(112, 43, 43, 0);
+    z-index: 8;
+    text-transform: uppercase;
+    font-family: montserrat,'sans-serif';
+ }
+
+ #email{
+    top: 42%;
+    left: 5%;
+    font-size: 3vh;
+    height: auto;
+    position: absolute;
+    
+    
+    background: rgba(112, 43, 43, 0);
+    z-index: 8;
+    text-transform: uppercase;
+    font-family: montserrat,'sans-serif';
+ }
+ #email2,#phn2,#reg2,#not2{
+    text-transform: none;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+ #reg{
+    top: 49%;
+    left: 5%;
+    font-size: 3vh;
+    height: auto;
+    position: absolute;
+    
+    
+    background: rgba(112, 43, 43, 0);
+    z-index: 8;
+    text-transform: uppercase;
+    font-family: montserrat,'sans-serif';
+ }
+ #not{
+    top: 56%;
+    left: 5%;
+    font-size: 3vh;
+    height: auto;
+    position: absolute;
+    
+    
+    background: rgba(112, 43, 43, 0);
+    z-index: 8;
+    text-transform: uppercase;
+    font-family: montserrat,'sans-serif';
+ }
+ #idp{
+     height: auto;
+     width: 20vw;
+     position: absolute;
+    top: 30%;
+    background: rgb(0, 0, 0);
+    z-index: 8;
+    right: 0%;
+    
+ }
+ #blk{
+    height: 70vh;
+    width: 50vw;
+    position: absolute;
+   top: 15%;
+   background: rgb(0, 0, 0);
+   z-index: 8;
+   right: 0%;
+   
+ }
+ #pass{
+     color: rgb(255, 255, 255);
+     font-size: 25vh;
+     font-family: longshot;
+     margin-left: 5vw;
+     margin-top: 20vh;
+     margin-bottom: 0;
+ }
+ #pass2{
+     width: 8vw;
+     font-size: 3vh;
+     letter-spacing: 25px;
+     text-align: left;
+     margin-left: 5vw;
+     margin-top: 0;
+     color: rgb(255, 255, 255);
+     font-family: 'Montserrat', sans-serif;
+ }
+#btn1{
+    left: 5%;
+    width: 15vw;
+    background-size: cover;
+    text-align: center;
+    padding: 1.5vh 0px 1.5vh 0px;
+    
+    border-radius: 20px;
+    font-size: 2vh;
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 75%;
+    
+    z-index: 10;
+ }
+#btn1:hover{
+    color: #000;
+    filter: invert(100%);
+}
+ #btn2{
+    left: 30%;
+    width: 15vw;
+    background: rgb(255, 255, 255);
+    background-size: cover;
+    text-align: center;
+    padding: 1.5vh 0px 1.5vh 0px;
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 20px;
+    font-size: 2vh;
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 75%;
+    transform: translate(-50%, 0%);
+    z-index: 10;
+ }
+ #btn2:hover{
+    background: #000;
+    color: rgb(255, 255, 255);
+ }
+ @media screen and (max-width: 992px) {
+    *{
+       padding: 0;
+       margin: 0;
+    }
+   #bev {
+      width: 40vw;
+      }
+      #icons{
+          left: 5%;
+          position: absolute;
+          top: 90%;
+          z-index: 10;
+          display: flex;
+          flex-direction: row;
+      }
+      #icon{
+          color: black;
+          margin-right: 5vw;
+      }
+      #vid{
+         font-size: 4vw;
+         top: 12.5%;
+      }
+      #date{
+         font-size: 4vw;
+         color: rgb(0, 0, 0);
+      }
+      #blk{
+         top: 20%;
+         height: 25vh;
+         width: 100vw; 
+      }
+      #idp{
+         height: auto;
+         min-height: 10vh;
+         width: 40vw;
+         position: absolute;
+        top: 22.5%;
+        background: rgb(0, 0, 0);
+        z-index: 8;
+        right: 0%;
+        
+     }
+     #pass{
+
+      font-size: 25vw;
+
+      margin-left: 15vw;
+      margin-top: 5vh;
+
+  }
+  #pass2{
+      width: 8vw;
+      font-size: 3vw;
+      letter-spacing: 25px;
+      text-align: center;
+      margin-left: 8vw;
+
+  }
+  #name{
+   top: 47%;
+   width: 100vw;
+   font-size: 7vw;
+}
+#phn,#email,#reg,#not{
+   font-size: 5vw;
+}
+#phn{
+   top: 55%;
+ }
+ #email{
+   top: 60%;
+ }
+ #reg{
+    top: 65%;
+ }
+ #not{
+    top: 70%;
+ }
+ #btn1{
+   left: 5%;
+   width: 40vw;
+   font-size: 3vw;
+   top: 80%;
+}
+#btn2{
+   top: 80%;
+   left: 55%;
+   width: 40vw;
+   font-size: 3vw;
+   transform: translate(0%, 0%);
+}
+}

@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+#icons{
+    left: 85%;
+    position: absolute;
+    top: 3%;
+    z-index: 10;
+}
+#icon{
+    color: black;
+    margin-right: 2vw;
+}
+#bev {
+    
+    left: 5%;
+    width: 8vw;
+    height: auto;
+    position: absolute;
+    top: 3%;
+    background: rgba(112, 43, 43, 0);
+    z-index: 8;
+ }
+ #smi {
+    transform: translate(-50%, -20%);
+    left: 49.5%;
+    width: 5vw;
+    height: auto;
+    position: absolute;
+    top: 55%;
+    background: rgba(112, 43, 43, 0);
+    z-index: 8;
+ }
+
+ #ty{
+    left: 50%;
+    width: 50vw;
+    text-align: center;
+    font-size: 15vh;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    background: rgba(112, 43, 43, 0);
+    z-index: 8;
+    font-family: longshot;
+ }
+ #tid{
+    left: 50%;
+    width: 50vw;
+    text-align: center;
+    font-size: 5vh;
+    height: auto;
+    position: absolute;
+    top: 31%;
+    transform: translate(-50%, -50%);
+    background: rgba(112, 43, 43, 0);
+    z-index: 8;
+    font-family: montserrat,'sans-serif';
+    font-weight: 600;
+ }
+ #tid2{
+   left: 50%;
+   width: 70vw;
+   text-align: center;
+   font-size: 3vh;
+   height: auto;
+   position: absolute;
+   top: 40%;
+   transform: translate(-50%, -50%);
+   background: rgba(112, 43, 43, 0);
+   z-index: 8;
+   font-family: montserrat,'sans-serif';
+   font-weight: 600;
+}
+ #sy{
+    left: 50%;
+    width: 50vw;
+    text-align: center;
+    font-size: 4vh;
+    height: auto;
+    position: absolute;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    background: rgba(112, 43, 43, 0);
+    z-index: 8;
+    font-family: montserrat,'sans-serif';
+    font-weight: 600;
+ }
+ #address{
+    left: 50%;
+    width: 50vw;
+    
+    
+    text-align: center;
+    padding: 1vh 0px 1vh 0px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    font-size: 3.5vh;
+    text-decoration: none;
+    color: #000;
+    font-family: montserrat,'sans-serif';
+    font-weight: 700;
+    position: absolute;
+    top: 80%;
+    transform: translate(-50%, 0%);
+    z-index: 10;
+}
+#contact{
+    left: 50%;
+    width: 50vw;
+    
+    
+    text-align: center;
+    padding: 1vh 0px 1vh 0px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    font-size: 2.5vh;
+    text-decoration: none;
+    color: #000;
+    font-family: montserrat,'sans-serif';
+    position: absolute;
+    top: 85%;
+    transform: translate(-50%, 0%);
+    z-index: 10;
+}
+
+#btn1{
+    left: 40%;
+    width: 15vw;
+    background-size: cover;
+    text-align: center;
+    padding: 1.5vh 0px 1.5vh 0px;
+    
+    border-radius: 20px;
+    font-size: 2vh;
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 68%;
+    transform: translate(-50%, 0%);
+    z-index: 10;
+ }
+#btn1:hover{
+    color: #000;
+    filter: invert(100%);
+}
+ #btn2{
+    left: 60%;
+    width: 15vw;
+    background: rgb(255, 255, 255);
+    background-size: cover;
+    text-align: center;
+    padding: 1.5vh 0px 1.5vh 0px;
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 20px;
+    font-size: 2vh;
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 68%;
+    transform: translate(-50%, 0%);
+    z-index: 10;
+ }
+ #btn2:hover{
+    background: #000;
+    color: rgb(255, 255, 255);
+ }
+ @media screen and (max-width: 1080px) {
+
+   #bev {
+   width: 40vw;
+   }
+   #icons{
+       left: 5%;
+       position: absolute;
+       top: 90%;
+       z-index: 10;
+       display: flex;
+       flex-direction: row;
+   }
+   #icon{
+       color: black;
+       margin-right: 5vw;
+   }
+   #ty{
+      left: 50%;
+      width: 50vw;
+      text-align: center;
+      font-size: 10vh;
+      height: auto;
+      position: absolute;
+      top: 15%;
+      transform: translate(-50%, -50%);
+      background: rgba(112, 43, 43, 0);
+      z-index: 8;
+      font-family: longshot;
+   }
+   #btn1{
+      left: 5%;
+      width: 40vw;
+      font-size: 3vw;
+      transform: translate(0%, 0%);
+   }
+   #btn2{
+      left: 55%;
+      width: 40vw;
+      font-size: 3vw;
+      transform: translate(0%, 0%);
+   }
+   #tid{
+      width: 100vw;
+      font-size: 5vw;
+      top: 40%;
+   }
+   #tid2{
+      width: 100vw;
+      font-size: 3vw;
+      top: 45%;
+   }
+   #sy{
+
+      width: 100vw;
+      font-size: 4vw;
+      top: 50%;
+   }
+   #smi {
+      transform: translate(-50%, -20%);
+      left: 49.5%;
+      width: 20vw;
+      height: auto;
+      position: absolute;
+      top: 55%;
+      background: rgba(112, 43, 43, 0);
+      z-index: 8;
+   }
+   #address{
+      width: 100vw;
+      font-size: 3.5vw;
+      top: 75%;
+
+  }
+  #contact{
+      width: 100vw;
+      font-size: 3vw;
+      top: 80%;
+
+  }
+ }

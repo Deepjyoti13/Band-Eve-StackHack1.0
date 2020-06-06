@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.idcard {
+	height: 20vh;
+	width: auto;
+}
+
+#previewOverlay{
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	
+	background: -moz-linear-gradient(rgba(11,11,11,0.1), rgba(11,11,11,0.6)) repeat-x rgba(11,11,11,0.2);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(11,11,11,0.1)), to(rgba(11,11,11,0.6))) repeat-x rgba(11,11,11,0.2);
+	z-index:100000;
+}
+
+#previewBox{
+	background: #ffffff;
+	width:30vw;
+	position:fixed;
+	left:50%;
+	top:25%;
+	margin:-130px 0 0 -230px;
+	border-radius: 10px;
+}
+
+#previewBox h1,
+#previewBox p{
+	font:26px/1 ;
+	
+	padding: 0 25px;
+	
+	color:rgb(0, 0, 0);
+}
+
+#previewBox h1{
+	letter-spacing:0.3px;
+	color:rgb(0, 0, 0);
+	font-size: 4vh;
+}
+
+#previewBox p{
+	background:none;
+	font-size:16px;
+	line-height:1.4;
+	padding-top: 7px;
+}
+
+#previewButtons{
+	padding:15px 0 25px;
+	text-align:center;
+}
+
+#previewBox .button{
+	display:inline-block;
+	background: rgba(0, 0, 0, 0.158);
+	color:rgb(0, 0, 0);
+	position:relative;
+	width: 10vw;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font:17px/33px ;
+	border-radius: 5px;
+	margin-right: 15px;
+	
+	text-decoration:none;
+	border:none;
+}
+#previewBox .button:hover{
+	background: rgba(0, 0, 0, 0.336);
+}
+
+#previewBox .button:last-child{	margin-right:0;}
+
+#previewBox .button span{
+	position:absolute;
+	top:0;
+	right:-5px;
+	
+	width:5px;
+	height:33px
+}
+
+#previewBox .form_yes{				background-position:left top;}
+#previewBox .form_yes span{			background-position:-195px 0;}
+#previewBox .form_yes:hover{		background-position:left bottom;}
+#previewBox .form_yes:hover span{	background-position:-195px bottom;}
+
+#previewBox .form_no{				background-position:-200px top;}
+#previewBox .form_no span{			background-position:-395px 0;}
+#previewBox .form_no:hover{		background-position:-200px bottom;}
+#previewBox .form_no:hover span{	background-position:-395px bottom;}

@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.5;
+    width: 100%;
+  }
+  #bodyx{
+    display: flex;flex-direction: row;
+  }
+  #bodyx2{
+    margin-left: 10vw;
+  }
+  h1 {
+    font-size: 10vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  #evn{
+
+    width: 30vw;
+    height: auto;
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+  }
+  #upim{
+    font-size: 2.5vh;
+  }
+  #rfp{
+    font-size: 7vh;
+  }
+  #illus{
+    height: 80vh;
+    width: auto;
+    margin-top: 10vh;
+    margin-left: 10vw;
+    position: fixed;
+  }
+  .container {
+    max-width: 40vw;
+    margin: 0 ;
+    padding: 20px 16px 40px 16px;
+    
+  }
+
+  .form-footer {
+    margin-top: 2em;
+  }
+  
+  .ui-input {
+    position: relative;
+    padding: 0;
+    border: 0;
+  }
+  
+  .ui-input input {
+    font-family: 'Montserrat', sans-serif;
+    border: 0;
+    background: none;
+    padding: 16px 0 0 0;
+    font-size: 24px;
+    outline: 0;
+    width: 100%;
+    tap-highlight-color: rgb(0, 0, 0);
+    touch-callout: none;
+  }
+  
+  .ui-input input + label {
+    position: relative;
+    display: block;
+    padding: 8px 0 8px 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: .0875em;
+    font-weight: 500;
+    text-align: left;
+  }
+  .ui-input input + label::before, .ui-input input + label::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+  }
+
+  .ui-input input + label::before {
+    background-color: rgb(0, 0, 0);
+  }
+  .ui-input input + label::after {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    background-color: #6EB1FF;
+    height: 2px;
+  }
+  .ui-input input + label span {
+    position: relative;
+    color: rgb(0, 0, 0);
+    transition: color 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .ui-input input + label span::after {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    transform: scaleX(1);
+    white-space: nowrap;
+    color: #fff;
+    background-image: linear-gradient(to right, #4A90E2 50%, rgba(255, 255, 255, 0) 0%);
+    background-position: 100% 50%;
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translateZ(0);
+    transition: background-position 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  .ui-input input:focus + label::after,
+  .ui-input input.error + label::after,
+  .ui-input input:invalid + label::after,
+  .ui-input input.filled + label::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  .ui-input input:focus + label span::after,
+  .ui-input input.error + label span::after,
+  .ui-input input:invalid + label span::after,
+  .ui-input input.filled + label span::after {
+    background-image: linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 0%);
+    background-position: 0% 50%;
+  }
+  
+  .ui-input input.filled {
+    color: #ffffff;
+  }
+  .ui-input input.filled + label::after {
+    background-color: #ffffff;
+  }
+  .ui-input input.filled + label span::after {
+    background-image: linear-gradient(to right, #ffffff 50%, rgba(255, 255, 255, 0) 0%);
+    background-position: 0% 50%;
+  }
+  
+  .ui-input input:focus {
+    color: #6EB1FF;
+  }
+  .ui-input input:focus + label::after {
+    background-color: #6EB1FF;
+  }
+  .ui-input input:focus + label span::after {
+    background-image: linear-gradient(to right, #6EB1FF 50%, rgba(255, 255, 255, 0) 0%);
+    background-position: 0% 50%;
+  }
+  
+  .ui-input input.error,
+  .ui-input input:invalid {
+    color: #E66161;
+  }
+  .ui-input input.error + label::after,
+  .ui-input input:invalid + label::after {
+    background-color: #E66161;
+  }
+  .ui-input input.error + label span::after,
+  .ui-input input:invalid + label span::after {
+    background-image: linear-gradient(to right, #E66161 50%, rgba(255, 255, 255, 0) 0%);
+    background-position: 0% 50%;
+  }
+  
+  .btn {
+    border: 0;
+    background-color: #50617A;
+    padding: 18px 30px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: .0875em;
+    font-weight: 500;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    outline: 0;
+    transition: background-color 300ms cubic-bezier(0.215, 0.61, 0.355, 1), color 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  
+  .btn:focus, .btn:active,
+  .btn:hover {
+    background-color: #6EB1FF;
+    color: white;
+  }
+  
+  .__first, .__second, .__third, .__fourth {
+    animation-name: fadeIn;
+    animation-duration: 180ms;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+  }
+  
+  .__first {
+    animation-delay: 0;
+  }
+  
+  .__second {
+    animation-delay: 80ms;
+  }
+  
+  .__third {
+    animation-delay: 180ms;
+  }
+  
+  .__fourth {
+    animation-delay: 360ms;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -25%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @import url('https://fonts.googleapis.com/css?family=Lato');
+
+
+  #ms{
+    background: rgb(255, 153, 153);
+    border-radius: 5px;
+  }
+  #ms p{
+    padding: 10px;
+  }
+.containerx{
+  display: block;
+  position: relative;
+  height: auto;
+  width: 40vw;
+  padding: 0px;
+}
+
+h2 {
+	color: #000;
+}
+
+.containerx ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+	display: flex;
+	flex-direction: row;
+}
+
+.containerx ul li{
+  color: #000;
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: auto;
+	margin-right: 25px;
+}
+
+
+.containerx ul li input[type=radio]{
+  position: absolute;
+  visibility: hidden;
+}
+
+.containerx ul li label{
+  display: block;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  font-weight: 300;
+  font-size: 1em;
+  padding: 15px 15px 15px 30px;
+  margin-right: 25px;
+  margin: 10px auto;
+  height: auto;
+  background: rgb(212, 212, 212);
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+}
+
+.containerx ul li:hover label{
+  color: rgb(0, 119, 255);
+  
+}
+
+.containerx ul li .check{
+  display: block;
+  position: absolute;
+  
+ 
+  height: 15px;
+  width: 15px;
+  top: 30px;
+  left: 20px;
+	
+	transition: border .25s linear;
+	-webkit-transition: border .25s linear;
+}
+
+
+.containerx ul li:hover .check {
+ 
+}
+
+.containerx ul li .check::before {
+  display: block;
+  position: absolute;
+	content: '';
+  
+  height: 10px;
+  width: 10px;
+  top: 2.5px;
+left: 2.5px;
+  margin: auto;
+	transition: background 0.25s linear;
+	-webkit-transition: background 0.25s linear;
+}
+
+
+
+
+
+
+input[type=radio]:checked ~ label{
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  background: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+.width50-left {
+    width: 20vw;
+    height: auto;
+    margin-top: 2vh;
+    text-align: left;
+    
+    
+}
+
+.idcard{
+  height: 30vh;
+  width: auto;
+}
+.ImgUpload {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	
+}
+
+.ImgUpload + label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 4px;
+    background-color: rgba(0, 0, 0, 0.212);
+    color: #000;
+    border-radius: 5px;
+    padding: 8px;
+    
+    
+}
+
+.ImgUpload:focus + label,
+.ImgUpload + label:hover {
+    color: white;
+    background-color: #4285f4;
+}
+
+.ImgUpload + label {
+	cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+    #illus{
+    display: none;
+  }
+  #bodyx2{
+    margin-left: 5vw;
+  }
+  #ullu{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vh;
+  }
+  .containerx{
+    display: block;
+    position: relative;
+    height: auto;
+    
+    padding: 0;
+  }
+  .containerx ul li{
+    
+    height: auto;
+    margin-bottom: 0;
+    
+  }
+  .ui-input input + label::before, .ui-input input + label::after {
+    width: 80vw;
+    font-size: 5vw;
+  }
+
+  #rfp{
+    font-size: 7vw;
+    font-weight: 600;
+    width: 75vw;
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 6vw;
+    width: 75vw;
+  }
+  .ui-input input + label {
+    font-size: 2.5vw;
+    width: 75vw;
+  }
+  .width50-left {
+    width: 80vw;  
+}
+.btn {
+  width: 80vw;
+
+}
+.containerx ul li label{
+  display: block;
+  position: relative;
+  font-weight: 300;
+  font-size: 1em;
+  padding: 15px 15px 15px 30px;
+  margin: 10px auto;
+  height: auto;
+  
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+}
+.containerx ul li .check{
+  left: 0px;
+}
+.idcard{
+  width: 75vw;
+  height: auto;
+}
+}
+
+
+
+.idcard {
+	height: 20vh;
+	width: auto;
+}
+
+#previewOverlay{
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	
+	background: -moz-linear-gradient(rgba(11,11,11,0.1), rgba(11,11,11,0.6)) repeat-x rgba(11,11,11,0.2);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(11,11,11,0.1)), to(rgba(11,11,11,0.6))) repeat-x rgba(11,11,11,0.2);
+	z-index:100000;
+}
+
+#previewBox{
+	background: #ffffff;
+	width:30vw;
+	position:fixed;
+	left:50%;
+	top:25%;
+	margin:-130px 0 0 -230px;
+	border-radius: 10px;
+}
+
+#previewBox h1,
+#previewBox p{
+	font:26px/1 ;
+	
+	padding: 0 25px;
+	
+	color:rgb(0, 0, 0);
+}
+
+#previewBox h1{
+	letter-spacing:0.3px;
+	color:rgb(0, 0, 0);
+	font-size: 4vh;
+}
+
+#previewBox p{
+	background:none;
+	font-size:16px;
+	line-height:1.4;
+	padding-top: 7px;
+}
+
+#previewButtons{
+	padding:15px 0 25px;
+	text-align:center;
+}
+
+#previewBox .button{
+	display:inline-block;
+	background: rgb(202, 202, 202);
+	color:rgb(0, 0, 0);
+	position:relative;
+	width: 10vw;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font:17px/33px ;
+	border-radius: 5px;
+	margin-right: 15px;
+	
+	text-decoration:none;
+	border:none;
+}
+#previewBox .button:hover{
+  background: rgb(116, 116, 116);
+  color: white;
+}
+
+#previewBox .button:last-child{	margin-right:0;}
+
+#previewBox .button span{
+	position:absolute;
+	top:0;
+	right:-5px;
+	
+	width:5px;
+	height:33px
+}
+
+#previewBox .form_yes{				background-position:left top;}
+#previewBox .form_yes span{			background-position:-195px 0;}
+#previewBox .form_yes:hover{		background-position:left bottom;}
+#previewBox .form_yes:hover span{	background-position:-195px bottom;}
+
+#previewBox .form_no{				background-position:-200px top;}
+#previewBox .form_no span{			background-position:-395px 0;}
+#previewBox .form_no:hover{		background-position:-200px bottom;}
+#previewBox .form_no:hover span{	background-position:-395px bottom;}
+
+@media screen and (max-width: 992px) {
+	#previewBox{
+		background: #ffffff;
+		width:90vw;
+		max-height: 90vh;
+		position:fixed;
+		left:5%;
+		top:5%;
+		margin:0px 0 0 0px;
+		border-radius: 10px;
+	}
+	#previewBox h1,
+#previewBox p{
+	font-size: 3vw;
+}
+
+#previewBox h1{
+	font-size: 4vh;
+	margin-top: 5vh;
+}
+#previewButtons{
+	padding: 25px 0 25px;
+	text-align:center;
+	
+}
+#previewBox .button{
+	width: 30vw;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+}

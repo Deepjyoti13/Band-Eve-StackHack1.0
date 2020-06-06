@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>Band Eve</title>
+    <style>
+        @font-face {
+            font-family: longshot;
+            src: url("{% static 'fonts/Long_Shot.ttf' %}");
+        }
+
+        #btn {
+            background-image: url("{% static 'img/orange.jpg' %}");
+        }
+    </style>
+</head>
+
+<body>
+    <div id="icons">
+        <a href="#"><i id="icon" class="fab fa-facebook-f fa-2x"></i></a>
+        <a href="#"><i id="icon" class="fab fa-twitter fa-2x"></i></a>
+        <a href="#"><i id="icon" class="fab fa-instagram fa-2x"></i></a>
+    </div>
+
+    <p id="address">Venue: NIT Agartala, Agartala, West Tripura</p>
+    <p id="contact">bandeve.dad@gmail.com | +911234567890</p>
+    <img src="{% static 'img/Bandeve.png' %}" alt="">
+    <p id="desc">An Evening with your favourite local bands performing Live</p>
+    <a id="btn" href="{% url 'form' %}">GRAB YOUR PASSES</a>
+    <img id="svg1" src="{% static 'img/Ellipse 3.png' %}" alt="">
+    <img id="svg2" src="{% static 'img/Ellipse 1.png' %}" alt="">
+    <img id="svg3" src="{% static 'img/Ellipse 2.png' %}" alt="">
+    <img id="svg4" src="{% static 'img/Ellipse 4.png' %}" alt="">
+    <img id="svg5" src="{% static 'img/Ellipse 5.png' %}" alt="">
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+
+</html>

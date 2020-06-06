@@ -1,0 +1,17 @@
+
+body{
+  /* for the colour gradient of the pages */
+  background: #232526;  
+  background: -webkit-linear-gradient(to left, #414345, #232526);  /*Chrome 10-25, Safari 5.1-6*/
+  background: linear-gradient(to left, #414345, #232526); 
+  
+  /* for removing the scrool bar  */
+  padding-right: 0px !important;
+  overflow-y: hidden !important;
+}
+
+.x{
+  background: #232526;  
+  background: -webkit-linear-gradient(to left, #414345, #232526);  /*Chrome 10-25, Safari 5.1-6*/
+  background: linear-gradient(to left, #414345, #232526); 
+}

@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/admin_profile.css' %}">
+    <title>Visitor Profile</title>
+    <style>
+      @font-face {
+        font-family: longshot;
+        src: url("{% static 'fonts/Long_Shot.ttf' %}");
+      }
+      #btn1 {
+        background-image: url("{% static 'img/orange.jpg' %}");
+      }
+    </style>
+</head>
+<body>
+    <span id="blk">
+        <p id="pass">BE</p>
+        <p id="pass2">PASS</p>
+    </span>
+    <div>
+    <img id="bev" src="{% static 'img/Bandeve.png' %}" alt="">
+    <div id="icons">
+    <a href="#"><i id="icon" class="fab fa-facebook-f fa-2x"></i></a>
+    <a href="#"><i id="icon" class="fab fa-twitter fa-2x"></i></a>
+    <a href="#"><i id="icon" class="fab fa-instagram fa-2x"></i></a>
+    </div>
+    </div>
+
+    <div>
+      <p id="vid">Visitor ID: {{ data.random}}</p>
+      <p id="date">Date: {{ data.date}}</p>
+    </div>
+
+    <div id="detail">
+    <p id="name">{{ data.name}}</p>
+    <p id="phn">Mobile: <span id="phn2">{{data.phoneNumber}}</span> </p>
+    <p id="email">email: <span id="email2">{{data.email}}</span> </p>
+    <p id="reg">Registration Type: <span id="reg2">{{data.regType}}</span> </p>
+    <p id="not">Number of Tickets: <span id="not2">{{data.ticketNo}}</span></p>
+    
+    </div>
+    <div>
+        <img id="idp" src="{{data.idCard.url}}" alt="">
+    </div>
+    <a id="btn1" href="/">HOME</a>
+    <a id="btn2" href="{% url 'admin_page' %}">BACK</a>
+
+</body>
+</html>
