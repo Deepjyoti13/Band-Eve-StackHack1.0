@@ -110,4 +110,9 @@ def otp(request, pk):
             messages.info(request, "Invalid OTP. Try again!")
             return redirect('form')
     # for rendering html
+<<<<<<< HEAD
     return render(request, 'otp.html')
+=======
+    return render(request, 'otp.html')
+
+>>>>>>> c3710233326414e5eaa5685ca2518131244d0be8

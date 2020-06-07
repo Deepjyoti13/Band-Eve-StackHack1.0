@@ -2,6 +2,8 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from . import views
+
+# url path for admin site 
 urlpatterns = [
     path('login', views.manager_login, name='manager_login'),
     path('logout',views.manager_logout,name='manager_logout'),
