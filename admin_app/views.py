@@ -10,10 +10,10 @@ from django.contrib.auth.decorators import login_required
 # admin view
 def admin_page(request):
     data = Register.objects.all()
-    Self = Register.objects.filter(regType="Self").count()
-    Group = Register.objects.filter(regType="Group").count()
-    Corporate = Register.objects.filter(regType="Corporate").count()
-    Others = Register.objects.filter(regType="Others").count()
+    Self = Register.objects.filter(regType="Self").filter(status="True").count()
+    Group = Register.objects.filter(regType="Group").filter(status="True").count()
+    Corporate = Register.objects.filter(regType="Corporate").filter(status="True").count()
+    Others = Register.objects.filter(regType="Others").filter(status="True").count()
     Total = Self+Group+Corporate+Others
     context = {
         "data": data,
