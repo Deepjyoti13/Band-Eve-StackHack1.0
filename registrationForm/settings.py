@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ukhw=4rteh%u%jvl7f(twz+05)&p#@kc43mleh!a&$191hbun%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['bandeve.herokuapp.com', '127.0.0.1']
 
@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'registrationForm.wsgi.application'
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME':'BandEve',
-#         'USER':'postgres',
-#         'PASSWORD':'Deepjyoti13.aws',
+#         'NAME':'DataBase Name',
+#         'USER':'Username',
+#         'PASSWORD':'password',
 #         'HOST':'localhost',
 #         'PORT':'5432'
 #     }
@@ -89,9 +89,9 @@ WSGI_APPLICATION = 'registrationForm.wsgi.application'
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME':'alpha',
-#         'USER':'root',
-#         'PASSWORD':'',
+#         'NAME':'DataBase Name',
+#         'USER':'Username',
+#         'PASSWORD':'password',
 #         'HOST':'localhost',
 #         'PORT':'3306'
 #     }
