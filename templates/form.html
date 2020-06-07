@@ -32,7 +32,7 @@
         <form method="POST" enctype="multipart/form-data" action="" id="myform"  class="form" action="#">
           {% csrf_token %}
 
-        <img id="evn" src="{% static 'img/Bandeve.png' %}" alt="">
+        <a href="/"><img id="evn" src="{% static 'img/Bandeve.png' %}" alt=""></a>
           <!-- messages -->
           {% if messages %}
           {% for mes in messages %}
@@ -116,8 +116,7 @@
           <div class="width50-left">
             <h2 id="upim">Upload an image of your id card:</h2><br>
             <input type="file" name="idCard" id="ImgUpload" class="ImgUpload" accept=".jpeg,.png" onchange="openFile(event) " required>
-            <label for="ImgUpload">Choose an Image</label>
-            <span>(Only JPEG and PNG files)</span>
+            <label for="ImgUpload">Select IDcard (.jpeg/.png)</label>
             
             </div>
             <div class="form-footer">
