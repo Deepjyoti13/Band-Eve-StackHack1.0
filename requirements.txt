@@ -21,7 +21,6 @@ Pillow==7.1.1
 pyasn1==0.4.8
 PyJWT==1.7.1
 pylint==2.5.2
-python-crontab==2.5.1
 python-dateutil==1.5
 pytz==2019.3
 PyYAML==5.3.1
