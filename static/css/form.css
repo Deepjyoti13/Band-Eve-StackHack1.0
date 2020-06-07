@@ -138,7 +138,7 @@ body {
   .ui-input input.error + label span::after,
   .ui-input input:invalid + label span::after,
   .ui-input input.filled + label span::after {
-    background-image: linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 0%);
+    background-image: linear-gradient(to right, gray, rgba(255, 255, 255, 0) 0%);
     background-position: 0% 50%;
   }
   
