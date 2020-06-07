@@ -197,6 +197,9 @@ body{
     color: rgb(255, 255, 255);
  }
  @media screen and (max-width: 992px){
+    #adm {
+        font-size: 10vw;
+    }
     #bev {
         width: 20vw;
         }
