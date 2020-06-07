@@ -143,10 +143,11 @@ body {
   }
   
   .ui-input input.filled {
-    color: #ffffff;
+    color: #000000;
   }
   .ui-input input.filled + label::after {
     background-color: #ffffff;
+    color: black!important;
   }
   .ui-input input.filled + label span::after {
     background-image: linear-gradient(to right, #ffffff 50%, rgba(255, 255, 255, 0) 0%);
