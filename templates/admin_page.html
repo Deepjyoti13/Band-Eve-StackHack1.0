@@ -59,12 +59,14 @@
             <p id="ps">Passes</p>
         </div>
         {% for x in data %}
+        {% if x.status %}
         <div id="listdivitem">
             <p><a style="text-decoration: none; color: white;" href="{% url 'profile' x.id %}">{{x.random}}</a></p>
             <p>{{x.name}}</p>
             <p>{{x.date}}</p>
             <p>{{x.ticketNo}}</p>
         </div>
+        {% endif %}
         {% endfor %}
 
 

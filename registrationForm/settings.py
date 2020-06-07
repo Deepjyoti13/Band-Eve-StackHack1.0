@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'registrationForm.wsgi.application'
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME':'DataBase Name',
-#         'USER':'Username',
-#         'PASSWORD':'password',
+#         'NAME':'BandEve',
+#         'USER':'postgres',
+#         'PASSWORD':'Deepjyoti13.aws',
 #         'HOST':'localhost',
 #         'PORT':'5432'
 #     }
