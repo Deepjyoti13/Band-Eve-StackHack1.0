@@ -1,5 +1,4 @@
 from django.db import models
-from phonenumber_field.modelfields import PhoneNumberField
 import uuid
 
 # Create your models here.
@@ -12,7 +11,7 @@ class Register(models.Model):
     )
     name = models.CharField(max_length=50)
     email = models.EmailField(max_length=254,null=True)
-    phoneNumber = PhoneNumberField(null=True)
+    phoneNumber = models.CharField(max_length=50)
     idCard = models.ImageField(upload_to='idCard', null=True)
     regType = models.CharField(max_length=25, choices=regChoice,null=True)
     ticketNo = models.CharField(max_length=20, null=True)
