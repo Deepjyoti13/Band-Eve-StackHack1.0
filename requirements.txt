@@ -8,7 +8,7 @@ docutils==0.15.2
 gunicorn==20.0.4
 Pillow==7.1.1
 pyasn1==0.4.8
-PyJWT==1.7.1
+PyJWT==2.4.0
 pylint==2.5.2
 python-dateutil==1.5
 pytz==2019.3
